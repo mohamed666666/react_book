@@ -17,7 +17,7 @@ class Login extends Component {
         this.setState({ [e.target.name]: e.target.value });
       };
 
-      createuser = e => {
+      loginuser = e => {
         e.preventDefault();
         axios.post(API_URL+"/login", this.state)
       };
@@ -30,7 +30,7 @@ class Login extends Component {
     render() { 
         return (
 
-            <Form onSubmit={ this.createuser}>
+            <Form onSubmit={ this.loginuser}>
         
         <FormGroup>
           <Label for="email">Email:</Label>

@@ -3,6 +3,7 @@ import { Component } from "react";
 import axios from "axios";
 import './home.css'
 
+import { Link } from "react-router-dom";
 class Home extends Component {
   state = { books: [] };
 
@@ -21,10 +22,12 @@ class Home extends Component {
     return (
       <div className="book">
         {newItems.map((item) => (
+          <Link to={"/book/"+item.id}>
           <li key={item.id}>
             {item.title}
           
           </li>
+          </Link>
         ))}
       </div>
     );
